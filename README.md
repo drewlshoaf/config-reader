@@ -1,4 +1,4 @@
-# config-reader - 
+# config-reader
 
 ### About
 config-reader is a command-line utility written in core node.js (V10 or greater) which imports a config file and makes it usable, using no external libraries.
