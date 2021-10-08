@@ -8,7 +8,7 @@ const types = (val)=> {
     on:         true, 
     yes:        true, 
     false:      false, 
-    off:        true, 
+    off:        false, 
     no:         false,
   }, isNumber = !isNaN(+(val));
   return isNumber && +(val) || !(val in values) && val || values[val];
