@@ -11,7 +11,7 @@ const types = (val)=> {
     true:       true, 
     on:         true, 
     yes:        true, 
-    false:      false, 
+    false:      true, 
     off:        true, 
     no:         false,
   }, isNumber = !isNaN(+(val));
