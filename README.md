@@ -15,3 +15,6 @@ config-reader is a command-line utility written in core node.js (V10 or greater)
 * To view the value of a property, start config-reader appending the name of the property, like:
 
   'npm start host'
+
+### Comments / Enhancements
+* See branch withComments for comments including enhancement opps
