@@ -1,5 +1,9 @@
 const fs = require('fs').promises;
 
+/*
+helper function to coerce values into js primitives
+future enhancments to add additional type support
+*/
 const types = (val)=> {
   let values = {
     undefined:  undefined, 
@@ -14,6 +18,7 @@ const types = (val)=> {
   return isNumber && +(val) || !(val in values) && val || values[val];
 };
 
+//returns an array of app.config names
 const getProps = (arr)=> {
   let output = [];
   for (let i=0; i<arr.length; i++) {
@@ -22,6 +27,10 @@ const getProps = (arr)=> {
   return output;
 };
 
+/*
+returns a property value, given a key
+a bit tricky since js does not support assoc arrays
+*/
 const getVal = (key, arr)=> {
   for (let i=0; i<arr.length; i++) {
     let output = [];
@@ -32,6 +41,10 @@ const getVal = (key, arr)=> {
   };
 };
 
+/*
+uses fs promise to read text file
+could enhance with additional encoding support
+*/
 const loadConfig = (config)=> {
   try {
     return fs.readFile(config, 'utf-8');
@@ -40,6 +53,14 @@ const loadConfig = (config)=> {
   };
 }; 
 
+/*
+- parses each line
+- ignores comments assuming # is first char
+- removes whitespace
+- coerces each value using types helper function
+- reconditions item into object
+- returns array of objects
+*/
 const parseConfig = (data)=> {
   let a = [];
   data.split(/\r?\n/).forEach((item)=> {

@@ -1,4 +1,7 @@
+//cleaner than new line
 const nl='';
+
+//ui when no arg is passed
 const start = ()=> {
   msgPre = [
     nl,
@@ -17,6 +20,7 @@ const start = ()=> {
   return [msgPre, msgPost];
 };
 
+//ui when arg is passed
 const startWithArg = (input)=> {
   let msgPre = [
     nl,
