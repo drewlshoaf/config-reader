@@ -4,7 +4,7 @@
 config-reader is a command-line utility written in core node.js (V10 or greater) which imports a config file and makes it usable, using no external libraries.
 
 ### Requirements
-1. Node.js Version 10 or greater
+1. Node.js Version 10 or greater - https://nodejs.org/en/download/
 
 ### Running locally
 * From a command line, browse to the config-reader directory
