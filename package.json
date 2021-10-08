@@ -1,0 +1,10 @@
+{
+  "name": "config-reader",
+  "version": "1.0.0",
+  "description": "Imports and parses a config file and turns it into a usable object, allowing you to view the value of any property.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "drewszoo"
+}
