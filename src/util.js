@@ -32,9 +32,9 @@ const getVal = (key, arr)=> {
   };
 };
 
-const loadConfig = (config, enc)=> {
+const loadConfig = (config)=> {
   try {
-    return fs.readFile(config, enc);
+    return fs.readFile(config, 'utf-8');
   } catch (err) {
     return err;
   };

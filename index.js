@@ -1,10 +1,9 @@
 const util = require('./src/util');
 const ui = require('./src/ui');
 const config = "./app.config";
-const enc = 'utf8';
 
 (async ()=> {
-  let raw = await util.loadConfig(config, enc);
+  let raw = await util.loadConfig(config);
   let parsed = util.parseConfig(raw);
   let input = (process.argv.slice(2));
   let data, output;
